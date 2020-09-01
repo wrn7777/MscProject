@@ -1,0 +1,1 @@
+bash my_run_test.sh results/results_pretrained/egogesture_mobilenetv2_0.2x_RGB_32_best.pth 0.2

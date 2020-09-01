@@ -1,0 +1,13 @@
+使用的手势
+12	Zoom in with fingers
+16	Click with index finger
+38	Make a phone call
+40	Wave finger
+41	Knock
+81	Move finger towards left
+
+17	Sweep diagonal
+18	Sweep circle
+19	Sweep cross
+
+53 	Dual hand heart

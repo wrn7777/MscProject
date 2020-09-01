@@ -1,0 +1,1 @@
+esbmc "$1" --floatbv --k-induction --ssa-trace
