@@ -1,0 +1,15 @@
+s1:
+
+['Click_with_index_finger', 'Click_with_index_finger', 'Sweep_cross', 'Sweep_cross', 'Knock', 'Knock', 'Click_with_index_finger', 'Sweep_cross', 'Sweep_cross', 'Dual_hands_heart']
+average fps:     20.464420937425896
+
+s2:
+
+predicted classes:       ['Zoom_in_with_fingers', 'Click_with_index_finger', 'Make_a_phone_call', 'Knock', 'Knock', 'Click_with_index_finger', 'Sweep_cross', 'Sweep_cross', 'Dual_hands_heart']
+average fps:     21.239878283106037
+
+s3:
+
+['Dual_hands_heart', 'Dual_hands_heart', 'Sweep_cross', 'Knock', 'Knock', 'Click_with_index_finger', 'Sweep_diagonal', 'Sweep_cross', 'Sweep_cross', 'Dual_hands_heart']
+average fps:     21.313172384579772
+
