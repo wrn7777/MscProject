@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import *
+from PIL import Image, ImageTk
+
 import os
 import glob
 import json
@@ -157,8 +159,9 @@ class Application(tk.Frame):
         self.btn_classify["command"] = self.classify_video_btn
         self.btn_classify.grid(column=0, row=1)
 
-        self.label_result = tk.Label(self, width=40)
-        self.label_result["text"] = "The recognition result is :"
+        img = ImageTk.PhotoImage(Image.open('./res/1.png'))
+        self.label_result = tk.Label(self, image=img)
+        # self.label_result["text"] = "The recognition result is :"
         self.label_result.grid(column=1, row=1)
 
 
@@ -180,27 +183,26 @@ class Application(tk.Frame):
     def classify_video_btn(self):
         with open("./res/ui_opt.json", 'r') as opt_file:
             opt = json.load(opt_file)
-        root.filename = "/Users/ryan/Desktop/TestGesture/subject2/s1-1.mov"
+        # root.filename = "/Users/ryan/Desktop/TestGesture/subject2/s1-1.mov"
         result2path = {"Zoom_in_with_fingers": '3.png', "Click_with_index_finger" : '1.png', "Sweep_diagonal": '7.png', \
             "Sweep_circle": '8.png', "Sweep_cross": '9.png', "Make_a_phone_call": '5.png', \
-                "Wave_finger": '2.png', "Knock": '6.png', "Dual_hands_heart": '1.png', "Move_fingers_left": '4.png'}
+                "Wave_finger": '2.png', "Knock": '6.png', "Dual_hands_heart": '10.png', "Move_fingers_left": '4.png'}
         opt = SimpleNamespace(**opt)
         if(root.filename !=""):
             result, time = classify_video(opt, root.filename)
             image_path = './res/' + result2path[result]
-            print(time)
+            # print(time)
             if result != "":
-                img = tk.PhotoImage(Image.open(image_path))
+                self.img = ImageTk.PhotoImage(Image.open(image_path))
                 print(image_path)
-                self.label_result["text"] = "The recognition result is: {:s}".format(result)
-                # self.label_result.image = img
+                # self.label_result["text"] = "The recognition result is: {:s}".format(result)
+                self.label_result = tk.Label(self, image=self.img)
+                # self.label_result["text"] = "The recognition result is :"
+                self.label_result.grid(column=1, row=1)
                 self.time_result["text"] = 'Time spend: {:.2f}s'.format(time)
             else:
                 self.label_result["text"] = "Cannot recognize the hand gestrue. "
                 self.time_result["text"] = ""
-
-
-
 
 
     

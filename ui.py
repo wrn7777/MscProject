@@ -233,8 +233,9 @@ class Application(tk.Frame):
         self.btn_classify["command"] = self.classify_video_btn
         self.btn_classify.grid(column=0, row=1)
 
-        self.label_result = tk.Label(self,  width=40)
-        self.label_result["text"] = "The recognition result is :"
+        img = ImageTk.PhotoImage(Image.open('./res/1.png'))
+        self.label_result = tk.Label(self, image=img)
+        # self.label_result["text"] = "The recognition result is :"
         self.label_result.grid(column=1, row=1)
 
 
@@ -267,12 +268,13 @@ class Application(tk.Frame):
                     
             print(time)
             if result != "":
-                load = Image.open(image_path)
-                render = tk.PhotoImage(load)
-                self.label_result["text"] = "The recognition result is: {:s}".format(result)
-                # img = Label(self, image=render)
-                # img.image = render
-                # self.label_result.image = render
+                # self.label_result["text"] = "The recognition result is: {:s}".format(result)
+                self.img = ImageTk.PhotoImage(Image.open(image_path))
+                print(image_path)
+                # self.label_result["text"] = "The recognition result is: {:s}".format(result)
+                self.label_result = tk.Label(self, image=self.img)
+                # self.label_result["text"] = "The recognition result is :"
+                self.label_result.grid(column=1, row=1)
                 self.time_result["text"] = 'Time spend: {:.2f}s'.format(time)
             else:
                 self.label_result["text"] = "Cannot recognize the hand gestrue. "
