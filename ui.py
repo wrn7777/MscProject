@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import *
+from PIL import Image, ImageTk
 import os
 import glob
 import json
