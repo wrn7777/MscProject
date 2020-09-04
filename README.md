@@ -1,6 +1,12 @@
 # MscProject
 
 ## Preparation
+### My System Environment
+* MacOS 10.15.6
+* Python 3.7
+* OpenCV 4
+* PyTorch 1.4
+  
 ### Python
 * Using Python 3.7.
 * Install Numpy Library.
@@ -12,7 +18,7 @@
 * Install [PyTorch](http://pytorch.org/)
 
 ### OpenCV
-* Built up OpenCV-Python by following [this official site](https://docs.opencv.org/4.4.0/da/df6/tutorial_py_table_of_contents_setup.html)
+* Built up OpenCV4-Python by following [this official site](https://docs.opencv.org/4.4.0/da/df6/tutorial_py_table_of_contents_setup.html)
 
 ### EgoGesture
 * Download videos by following [the official site](http://www.nlpr.ia.ac.cn/iva/yfzhang/datasets/egogesture.html).
