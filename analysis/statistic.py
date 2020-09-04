@@ -2,26 +2,22 @@ from sklearn.metrics import *
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# single_result = ["/Users/ryan/Desktop/TestGesture/single/subject1.csv", "/Users/ryan/Desktop/TestGesture/single/subject2.csv","/Users/ryan/Desktop/TestGesture/single/subject3.csv"]
-# single_result = ["/Users/ryan/Desktop/TestGesture/single/subject1_16.csv", "/Users/ryan/Desktop/TestGesture/single/subject2_16.csv","/Users/ryan/Desktop/TestGesture/single/subject3_16.csv"]
-# continuous_result = ["/Users/ryan/Desktop/TestGesture/continuous/subject1.csv", "/Users/ryan/Desktop/TestGesture/continuous/subject2.csv","/Users/ryan/Desktop/TestGesture/continuous/subject3.csv"]
+# csv = ["./TestGesture/single/subject1.csv", "./TestGesture/single/subject2.csv","./TestGesture/single/subject3.csv"]
+csv = ["./TestGesture/single/subject1_16.csv", "./TestGesture/single/subject2_16.csv","./TestGesture/single/subject3_16.csv"]
+
 t = 0.25
 step = 1
-continuous_result = ["/Users/ryan/Desktop/TestGesture/continuous/subject1_"+str(t) + "_"+str(step)+".csv", 
-                        "/Users/ryan/Desktop/TestGesture/continuous/subject2_"+str(t) + "_"+str(step)+".csv", 
-                        "/Users/ryan/Desktop/TestGesture/continuous/subject3_"+str(t) + "_"+str(step)+".csv", ]
+
+# csv = ["./TestGesture/continuous/subject1_"+str(t) + "_"+str(step)+".csv", 
+#                         "./TestGesture/continuous/subject2_"+str(t) + "_"+str(step)+".csv", 
+#                         "./TestGesture/continuous/subject3_"+str(t) + "_"+str(step)+".csv", ]
 
 
-
-# df1 = pd.read_csv(single_result[0])
-# df2 = pd.read_csv(single_result[1])
-# df3 = pd.read_csv(single_result[2])
-
-df1 = pd.read_csv(continuous_result[0])
+df1 = pd.read_csv(csv[0])
 df1 = df1.dropna()
-df2 = pd.read_csv(continuous_result[1])
+df2 = pd.read_csv(csv[1])
 df2 = df2.dropna()
-df3 = pd.read_csv(continuous_result[2])
+df3 = pd.read_csv(csv[2])
 df3 = df3.dropna()
 
 print('Accuracy across subjects')
@@ -46,10 +42,10 @@ print('Average speed: ', new_df3['time'].mean())
 
 
 df = pd.concat([df1, df2, df3])
-# print('Accuracy across scenes')
-# print(df['result'].value_counts())
-# print('Accuracy:', accuracy_score(df['ground_truth'], df['result']))
-# print('Average speed: ', df['time'].mean())
+print('Accuracy across scenes')
+print(df['result'].value_counts())
+print('Accuracy:', accuracy_score(df['ground_truth'], df['result']))
+print('Average speed: ', df['time'].mean())
 print('totoal numbers of sample:' + str(df.shape[0]))
 
 # df1['total_frames'].hist(bins=10)

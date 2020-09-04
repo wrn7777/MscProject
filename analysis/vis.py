@@ -6,9 +6,9 @@ widths = ['0.2','0.45','0.7','1.0']
 ys = ['loss','prec1']
 styles = ['-o','-v','-p','-*']
 
-shor_path = '/Users/ryan/GitHub/MscProject/results/results_pretrained_16/'
-scra_path = '/Users/ryan/GitHub/MscProject/results/results_scratch/'
-base_path = '/Users/ryan/GitHub/MscProject/results/results_pretrained/'
+shor_path = './results/results_pretrained_16/'
+scra_path = './results/results_scratch/'
+base_path = './results/results_pretrained/'
 
 model_32_name = 'egogesture_mobilenetv2_{0:s}x_RGB_32_train.log'
 model_16_name = 'egogesture_mobilenetv2_{0:s}x_RGB_16_train.log'
@@ -23,7 +23,7 @@ for y in ys:
     plt.xlabel('Epoch')
     plt.ylabel(y)
     plt.title('width multipliers comparison with 32 sample duration')
-    plt.savefig('/Users/ryan/GitHub/MscProject/analysis/vis_32/'+y+'_widths_pretrained.png',dpi=400)
+    plt.savefig('./analysis/vis_32/'+y+'_widths_pretrained.png',dpi=400)
     plt.cla()
     plt.close()
 
@@ -35,7 +35,7 @@ for y in ys:
     plt.xlabel('Epoch')
     plt.ylabel(y)
     plt.title('width multipliers comparison with trained from scratch')
-    plt.savefig('/Users/ryan/GitHub/MscProject/analysis/vis_32/'+y+'_widths_scratch.png',dpi=400)
+    plt.savefig('./analysis/vis_32/'+y+'_widths_scratch.png',dpi=400)
     plt.cla()
     plt.close()
 
@@ -47,7 +47,7 @@ for y in ys:
     plt.xlabel('Epoch')
     plt.ylabel(y)
     plt.title('width multipliers comparison with models 16 sample duration')
-    plt.savefig('/Users/ryan/GitHub/MscProject/analysis/vis_32/'+y+'_widths_16.png',dpi=400)
+    plt.savefig('./analysis/vis_32/'+y+'_widths_16.png',dpi=400)
     plt.cla()
     plt.close()
 
@@ -63,7 +63,7 @@ for width in widths:
         plt.xlabel('Epoch')
         plt.ylabel(y)
         plt.title('width multiplier = '+width)
-        plt.savefig('/Users/ryan/GitHub/MscProject/analysis/vis_sc_32/'+width.replace('.','_')+'_'+y+'.png',dpi=400)
+        plt.savefig('./analysis/vis_sc_32/'+width.replace('.','_')+'_'+y+'.png',dpi=400)
         plt.cla()
         plt.close()
 
@@ -77,6 +77,6 @@ for width in widths:
         plt.xlabel('Epoch')
         plt.ylabel(y)
         plt.title('width multiplier = '+width)
-        plt.savefig('/Users/ryan/GitHub/MscProject/analysis/vis_16_32/'+width.replace('.','_')+'_'+y+'.png',dpi=400)
+        plt.savefig('./analysis/vis_16_32/'+width.replace('.','_')+'_'+y+'.png',dpi=400)
         plt.cla()
         plt.close()

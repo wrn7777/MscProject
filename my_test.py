@@ -252,16 +252,16 @@ def get_dataFrame(dir):
     df = pd.DataFrame({'file': files_list, 'total_frames': frames_videos, 'time': time_durations, 'result': result_list, 'ground_truth':labels*3})
     return df
 
-dir = "/Users/ryan/Desktop/TestGesture/subject1"
+dir = "./TestGesture/subject1"
 df1 = get_dataFrame(dir)
 
-dir = "/Users/ryan/Desktop/TestGesture/subject2"
+dir = "./TestGesture/subject2"
 df2 = get_dataFrame(dir)
 
-dir = "/Users/ryan/Desktop/TestGesture/subject3"
+dir = "./TestGesture/subject3"
 df3 = get_dataFrame(dir)
 
 
-df1.to_csv("/Users/ryan/Desktop/TestGesture/continuous/subject1_"+str(opt.clf_threshold_final) + "_"+str(step)+".csv", index=False)
-df2.to_csv("/Users/ryan/Desktop/TestGesture/continuous/subject2_"+str(opt.clf_threshold_final) + "_"+str(step)+ ".csv", index=False)
-df3.to_csv("/Users/ryan/Desktop/TestGesture/continuous/subject3_"+str(opt.clf_threshold_final) + "_"+str(step)+ ".csv", index=False)
+df1.to_csv("./TestGesture/continuous/subject1_"+str(opt.clf_threshold_final) + "_"+str(step)+".csv", index=False)
+df2.to_csv("./TestGesture/continuous/subject2_"+str(opt.clf_threshold_final) + "_"+str(step)+ ".csv", index=False)
+df3.to_csv("./TestGesture/continuous/subject3_"+str(opt.clf_threshold_final) + "_"+str(step)+ ".csv", index=False)
