@@ -12,7 +12,7 @@
 * Install [PyTorch](http://pytorch.org/)
 
 ### OpenCV
-* Built up OpenCV by following [this official site](https://docs.opencv.org/4.4.0/da/df6/tutorial_py_table_of_contents_setup.html)
+* Built up OpenCV-Python by following [this official site](https://docs.opencv.org/4.4.0/da/df6/tutorial_py_table_of_contents_setup.html)
 
 ### EgoGesture
 * Download videos by following [the official site](http://www.nlpr.ia.ac.cn/iva/yfzhang/datasets/egogesture.html).
